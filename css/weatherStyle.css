@@ -1,0 +1,41 @@
+#containerWeather{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    float: right;
+    text-align: center;
+    
+    
+}
+#pro{
+    width: 100%;
+}
+.cont{
+    display: inline-block;
+    text-align: center;
+    border-left: solid 1px #dedede;
+    border-right: solid 1px #dedede;
+    width: 12%;
+    
+}
+
+
+.p{
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    #desMedia {
+      font-size: 12px;
+    }
+    #timeMedia {
+        font-size: 12px;
+    }
+    #tempMedia {
+        font-size: 12px;
+    }
+  }
