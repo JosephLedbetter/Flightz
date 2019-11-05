@@ -24,6 +24,14 @@ nav .brand-logo {
   margin-top: 60px;
 }
 
+#find-info{
+  width: 200px;
+  opacity: .6;  
+}
+
+#information {
+  margin-left: 75px;
+}
 
 p {
   line-height: 2rem;
