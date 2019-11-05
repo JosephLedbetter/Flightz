@@ -1,6 +1,10 @@
+
 const findInfo = document.getElementById("find-info")
 
+const submitWeatherDestination = document.getElementById("submitWeatherDestination");
+
 findInfo.addEventListener('click', function(){
+    submitWeatherDestination.style.display = "none"
     block1 = true;
     block2 = true;
     block3 = true;
@@ -15,6 +19,9 @@ findInfo.addEventListener('click', function(){
     currentWeather();
 
 })
+
+
+
 
 
 let queryURL;
@@ -38,13 +45,13 @@ function currentWeather(){
             console.log(descriptionCurrent)
             console.log(iconCurrent);
             
-        })
+    })
 }
 
 const container = document.getElementById("containerWeather")
 const whatDay = document.getElementById("day")
 
-let pageNumber = 1;
+
 
 
 let dayFcut;

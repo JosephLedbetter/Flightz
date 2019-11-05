@@ -12,6 +12,9 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <!-- Weather CSS-->
+  <link href="css/weatherStyle.css" type="text/css" rel="stylesheet" media="screen,projection">
+
 
 </head>
 
@@ -33,7 +36,7 @@
           <h5 class="header col s12 light"></h5>
           <div class="wrapper" id="input-holder">
             <input type="text" label="origin" placeholder="Starting Location">
-            <input type="text" label="destination" placeholder="Destination by Country">
+            <input id="destination" type="text" label="destination" placeholder="Destination by Country">
             <input id="flight" type="text" label="flight" placeholder="Flight Number">
             <button class="center" id="find-info" >Submit</button>
           </div>
@@ -140,13 +143,10 @@
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4 id="weather">Weather</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id
-            nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies
-            eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et
-            pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed.
-            Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam
-            eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-            posuere cubilia Curae;</p>
+          <p id="submitWeatherDestination">Submit a destination</p>
+          <div id="containerWeather">
+
+          </div>
         </div>
       </div>
 
@@ -195,6 +195,8 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/flightref.js"></script>
+  <!-- Weather Script-->
+  <script src="js/weather.js"></script>
 
 </body>
 
