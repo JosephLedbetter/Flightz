@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Project 1</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-database.js"></script>
+
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <form id="country-form">
+            <label for="country-input">Country: </label>
+            <input type="text" id="country-input"><br><br>
+
+            <!-- submit button triggers new country to be searched -->
+            <input id="submit-country" type="submit" value="Submit">
+        </form>
+
+    </div>
+
+    <div id="currentNews">
+        <h1>Current News</h1>
+        
+        <div id="articles"></div>
+    </div>
+
+
+    <!-- Script -->
+    <script src="./project1.js"></script>
+
+
+    <!-- ctr akf = formatting for pretty print -->
+
+
+
+</body>
+
+</html>
