@@ -32,8 +32,9 @@
         <div class="row center">
           <h5 class="header col s12 light"></h5>
           <div class="wrapper" id="input-holder">
-            <input type="text" label="origin" placeholder="Starting Location">
-            <input type="text" label="destination" placeholder="Destination by Country">
+            <input id="country" type="text" label="destination-country" placeholder="Destination by Country">
+            <input id="destination" type="text" label="destination-city" placeholder="Destination by City">
+            <input id="airport-code" type="text" label="airport-code" placeholder="Airport Abbreviation">
             <input id="flight" type="text" label="flight" placeholder="Flight Number">
             <button class="center" id="find-info" >Submit</button>
           </div>
@@ -187,6 +188,10 @@
     </div>
   </div>
 
+  <footer class="center" id="footer">
+    <h5 id="footing">Flightz&copy;</h5>
+  </footer>
+
 
 
 
@@ -194,7 +199,8 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-  <script src="js/flightref.js"></script>
+  <script src="js/flight.js"></script>
+  <script src="js/weather.js"></script>
 
 </body>
 
