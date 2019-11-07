@@ -1,12 +1,13 @@
-src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1 jquery.min.js";
+// src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1 jquery.min.js";
 
 // firebase config connection to database
-src = "https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js";
+// src = "https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js";
 
 // TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries
 
-src = "https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js";
+// src = "https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js";
 
+$(document).ready(function(){
 var firebaseConfig = {
     apiKey: "AIzaSyDEy2CLiGdIS3rXWMO1JTEjlOkWYtHav6Y",
     authDomain: "flighttracker-63b90.firebaseapp.com",
@@ -17,11 +18,12 @@ var firebaseConfig = {
     appId: "1:721104525296:web:439cb738545e5fc896af35"
 };
 
+
 firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-//   action committed 'click' to return letiables
+// action committed 'click' to return letiables
 
 $("#find-info").on("click", function () {
     let airportItem = $("#airport-code").val().trim();
@@ -40,10 +42,12 @@ $("#find-info").on("click", function () {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response);
+        responseParsed = JSON.parse(response);
+        console.log(responseParsed);
         
-        database.ref().set({
-            flightResponse: response
+        database.ref().push({
+            flightResponse: responseParsed
         })
     });
+});
 });
