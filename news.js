@@ -8,7 +8,7 @@ let abbrev = {
     "argentina" : "ar",
 };
 
-let destination = $("#destination").val().trim();
+let destination = $("#country").val().trim();
 
 
 $("#find-info").on("click", function (event) {
@@ -17,7 +17,7 @@ $("#find-info").on("click", function (event) {
 
     console.log('submit button is working');
 
-    let destination = $("#destination").val().trim().toLowerCase();
+    let destination = $("#country").val().trim().toLowerCase();
     console.log('destination');
     console.log(destination);
     
