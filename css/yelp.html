@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+        <input id="input-city" type="text" name="city-input" placeholder="city">
+        
+        <button class="text" label="submit-button" id="submit">Submit</button>
+    
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$("button").on("click", function(){
+let inputCity = $("#input-city").val().trim();
+
+console.log(inputCity);
+
+let queryURL = "https://api.yelp.com/v3/events/featured{0erXHPFXmsBhhcCs7O7bnl6tRsxgrJWPonJdnPjbDqSF5bajXNS_YuKDQIbKB2q_NqRaYyPtyU7UBTshtcOvWUoGsuXD9anopN6sHuUHOS5hSDp7frDrlUBpwifDXXYx}&location.city"
+
+console.log(queryURL);
+
+})
+
+</script>
+
+</body>
+</html>

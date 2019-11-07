@@ -81,6 +81,14 @@ p {
   font-size: inherit;
 }
 
-footer.page-footer {
-  margin: 0;
+footer{
+  background: #1a75ff;
+  opacity: .5;
+  color: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+h5{
+  font-size: 20px;
 }

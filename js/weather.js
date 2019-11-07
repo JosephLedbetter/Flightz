@@ -4,6 +4,7 @@ const findInfo = document.getElementById("find-info")
 const submitWeatherDestination = document.getElementById("submitWeatherDestination");
 
 findInfo.addEventListener('click', function(){
+    container.style.display = "block"
     submitWeatherDestination.style.display = "none"
     block1 = true;
     block2 = true;
@@ -16,7 +17,7 @@ findInfo.addEventListener('click', function(){
     change(input)
     tester()
     run()
-    currentWeather();
+ 
 
 })
 
@@ -25,34 +26,16 @@ findInfo.addEventListener('click', function(){
 
 
 let queryURL;
-let queryURLCurrent;
+
 
 function change(des){
     queryURL = "http://api.openweathermap.org/data/2.5/forecast?q="+des+"&appid=53b15cc767ff751f3924fac372968f55"
-    queryURLCurrent = "http://api.openweathermap.org/data/2.5/weather?q="+des+"&appid=53b15cc767ff751f3924fac372968f55"
 }  
 
-function currentWeather(){
-    $.ajax({
-        url: queryURLCurrent,
-        method: "GET"
-        }).then(function(response) {
-            console.log(response)
-            let tempCurrent = response.main.temp;
-            let descriptionCurrent = response.weather[0].description;
-            let iconCurrent = response.weather[0].icon;
-            console.log(tempCurrent);
-            console.log(descriptionCurrent)
-            console.log(iconCurrent);
-            
-    })
-}
+
 
 const container = document.getElementById("containerWeather")
 const whatDay = document.getElementById("day")
-
-
-
 
 let dayFcut;
 let testCut1;
@@ -74,7 +57,6 @@ function tester(){
             let test3 = response.list[22].dt_txt
             testCut3 = test3.substr(0, 10)
             console.log(response)
-            
         })
 }
 
@@ -87,20 +69,10 @@ function run(){
             }).then(function(response) {
             
                 page(response, i)  
-                 
-                
-                
         })
     }
-    
-    
-    
-
-    
 }
 
-    
-    
 function page(response, i){
     let day = response.list[i].dt_txt
     let days = response.list[i].main.temp
@@ -111,7 +83,7 @@ function page(response, i){
     let descrip = response.list[i].weather[0].description
     let dayT = response.list[i].dt_txt
     dayFcut = dayT.substr(0, 10)
-
+    
     
     
     const cont = document.createElement("div")
@@ -129,6 +101,7 @@ function page(response, i){
     time.id = "timeMedia"
     temp.id = "tempMedia"
 
+    
 
     if(iconW === "01d"){
         img.setAttribute('src', "http://openweathermap.org/img/wn/01d@2x.png") 
@@ -234,6 +207,7 @@ function page(response, i){
         timeCut = "6:00 PM"
     }
     
+    
 
     
 
@@ -241,6 +215,7 @@ function page(response, i){
     const tempT = document.createTextNode(weatherNumber + " F")
     const desT = document.createTextNode(descrip)
 
+    
     
     
     if (dayFcut === testCut1){

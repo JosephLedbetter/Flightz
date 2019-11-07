@@ -4,6 +4,10 @@
     text-align: center;
     float: right;
     text-align: center;
+    padding-bottom: 15px;
+    box-shadow: 1px 1px 20px black;
+    border-radius: 5px;
+    display: none;
     
     
 }
@@ -24,18 +28,42 @@
     font-size: 17px;
     font-weight: bold;
     margin-bottom: 5px;
+    background:#dedede ;
+    box-shadow: 0px 0px 5px 0px #dedede;
+}
+
+#pro{
+    border-top: solid 1px #dedede;
+}
+#tempMedia{
+    border-top: solid 1px #dedede;
 }
 
 
 
+
 @media screen and (max-width: 700px) {
-    #desMedia {
-      font-size: 12px;
-    }
     #timeMedia {
-        font-size: 12px;
+        font-size: 10px;
     }
     #tempMedia {
-        font-size: 12px;
+        font-size: 10px;
     }
-  }
+    #desMedia {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #desMedia {
+      font-size: 11px;
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+    #timeMedia {
+        font-size: 11px;
+    }
+    #tempMedia {
+        font-size: 11px;
+    }
+}
