@@ -20,10 +20,47 @@ nav .brand-logo {
   letter-spacing: 2px;
 }
 
-#inputs{
-  margin-top: 60px;
+#input-holder {
+  border: 2px white solid;
+  background: black;
+  opacity: .5;
+  padding: 15px;
 }
 
+input {
+  color: White;
+}
+
+#find-info{
+  width: 200px;
+  background: white;
+  color: black;
+}
+
+#paradise{
+  filter: blur(2px);
+}
+
+#intro {
+  padding: 10px; 
+  border: 2px white solid;
+  background: black;
+  opacity: .5;
+}
+
+#news-wrapper{
+  box-shadow: 1px 1px 20px black;
+  border-radius: 5px;
+}
+
+#information {
+  padding-left: 150px;
+}
+
+#article-wrapper{
+  box-shadow: 1px 1px 20px black;
+  border-radius: 5px;
+}
 
 p {
   line-height: 2rem;
@@ -51,6 +88,7 @@ p {
     position: absolute;
     top: 40%;
   }
+
   #index-banner .section {
     top: 10%;
   }
@@ -73,6 +111,19 @@ p {
   font-size: inherit;
 }
 
-footer.page-footer {
-  margin: 0;
+footer{
+  background: #1a75ff;
+  opacity: .5;
+  color: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
+
+h5{
+  font-size: 20px;
+}
+
+input {
+  box-shadow: 2px 2px black;
+}
+

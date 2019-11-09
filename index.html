@@ -11,7 +11,10 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <!-- Weather CSS-->
+  <link href="css/weatherStyle.css" type="text/css" rel="stylesheet" media="screen,projection">
+
 
 </head>
 
@@ -27,21 +30,25 @@
     <div class="section no-pad-bot" id="inputs">
       <div class="container">
         <br><br>
+
         <!-- inputs to be placed here for the 'origin, destination destination by country, and flight number' -->
         <div class="row center">
           <h5 class="header col s12 light"></h5>
           <div class="wrapper" id="input-holder">
-            <input type="text" label="origin" placeholder="Starting Location">
-            <input type="text" label="destination" placeholder="Destination by Country">
-            <input type="text" label="flight" placeholder="Flight Number">
+            <input id="country" type="text" label="destination-country" placeholder="Destination by Country">
+            <input id="destination" type="text" label="destination-city" placeholder="Destination by City">
+            <input id="airport-code" type="text" label="airport-code" placeholder="Airport Abbreviation">
+            <input id="flight" type="text" label="flight" placeholder="Flight Number">
+            <button class="center" id="find-info" >Submit</button>
           </div>
         </div>
+
         <br>
         <br>
 
       </div>
     </div>
-    <div class="parallax"><img src="images/paradise.jpg" alt="Paradise"></div>
+    <div class="parallax"><img id="paradise" src="images/paradise.jpg" alt="Paradise"></div>
   </div>
 
 
@@ -50,9 +57,10 @@
 
       <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m4">
+        <div class="col s12 m6">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons"><a href="news">information</a></i></h2>
+            <h2 class="center brown-text" id="information"><i class="material-icons"><a href="#news">information</a></i>
+            </h2>
             <h5 class="center">News</h5>
 
             <p class="light">It is imparetive that our clients have the most current news during their travels. We
@@ -61,9 +69,9 @@
           </div>
         </div>
 
-        <div class="col s12 m4">
+        <div class="col s12 m6">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">cloud</i></h2>
+            <h2 class="center brown-text"><i class="material-icons"><a href="#weather">cloud</a></i></h2>
             <h5 class="center">Weather</h5>
 
             <p class="light">Whether you're in the mood for a romantic snowy winter wonderland, or a beautiful aqua blue
@@ -72,21 +80,12 @@
           </div>
         </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">"Local Events</h5>
-
-            <p class="light">It is always important to experience the local culture when visiting fun and exciting new
-              locations to create long lasting memories. This is why Flightz has provides local events at your final
-              stop.</p>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
 
-
+  <!-- China forest image container -->
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -105,19 +104,21 @@
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4 id="news">News</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id
-            nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies
-            eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et
-            pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed.
-            Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam
-            eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-            posuere cubilia Curae;</p>
+  
+          <!-- article wrapper -->
+  
+          <div class="wrapper" id="article-wrapper">
+            <div id="article-input">
+              <div id="title-container"></div>
+              <div id="description-container"></div>
+            </div>
+          </div>
+          </div>
         </div>
-      </div>
     </div>
   </div>
 
-  <!-- China forestation image container -->
+  <!-- Egypt Resort forestation image container -->
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -135,14 +136,11 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Weather</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id
-            nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies
-            eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et
-            pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed.
-            Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam
-            eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-            posuere cubilia Curae;</p>
+          <h4 id="weather">Weather</h4>
+          <p id="submitWeatherDestination"></p>
+          <div id="containerWeather">
+
+          </div>
         </div>
       </div>
 
@@ -163,34 +161,23 @@
     <div class="parallax"><img src="images/paris.jpg" alt="Eiffel Tower of Paris"></div>
   </div>
 
-  <!-- Local Events container-->
-  <div class="container">
-    <div class="section">
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4 id="news">News</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id
-            nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies
-            eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et
-            pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed.
-            Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam
-            eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-            posuere cubilia Curae;</p>
-        </div>
-      </div>
 
-    </div>
-  </div>
-
-
+  <footer class="center" id="footer">
+    <h5 id="footing">Flightz&copy;</h5>
+  </footer>
 
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="./news.js"></script>
+  <script src="js/flight.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script> 
+  
 
 </body>
 
-</html>
+</html> 
